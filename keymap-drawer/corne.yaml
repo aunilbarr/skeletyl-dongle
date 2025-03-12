@@ -1,7 +1,48 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
-  BAS: [↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-control$$', A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$',
-    Z, X, C, V, B, N, M, ',', ., /, Esc, '$$mdi:apple-keyboard-command$$', LOW, ␣, ⏎, RAI, '$$mdi:apple-keyboard-option$$']
+  BAS:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-control$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - {t: Z, h: LEFT SHIFT}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - Esc
+  - $$mdi:apple-keyboard-command$$
+  - {t: ENTER, h: RAI}
+  - LOW
+  - RAI
+  - ␣
+  - {t: BACKSPACE, h: LOW}
   LOW:
   - ↹
   - '1'
@@ -21,27 +62,27 @@ layers:
   - BT 3
   - BT 4
   - BT 5
-  - ←
-  - ↓
+  - Gui++
+  - '&mmv MOVE_UP'
   - ↑
-  - →
-  - {t: ▽, type: trans}
+  - '&mkp RCLK'
+  - POWER
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-control$$
+  - ↹
+  - Esc
+  - Ctl+Gui+Esc
+  - '&np'
+  - Gui+-
+  - ←
+  - ↓
+  - →
+  - Alt+Gui
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - {type: held}
-  - ␣
+  - {t: ▽, type: trans}
+  - {t: ␣, type: held}
   - ⏎
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-option$$
@@ -59,11 +100,11 @@ layers:
   - )
   - $$mdi:backspace-outline$$
   - $$mdi:apple-keyboard-control$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Tab Right
+  - Gui+S
+  - BRIGHTNESS INC
+  - {t: CAPSLOCK, h: Gui+↹}
+  - OUT TOG
   - '-'
   - '='
   - '['
@@ -71,11 +112,11 @@ layers:
   - \
   - '`'
   - $$mdi:apple-keyboard-shift$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Tab Left
+  - Gui+Sft+3
+  - BRIGHTNESS DEC
+  - Gui+W
+  - Gui+Q
   - _
   - +
   - '{'
@@ -83,8 +124,58 @@ layers:
   - '|'
   - '~'
   - $$mdi:apple-keyboard-command$$
-  - '&studio_unlock'
-  - ␣
-  - ⏎
   - {t: '&studio_unlock', type: held}
-  - $$mdi:apple-keyboard-option$$
+  - ␣
+  - {t: ▽, type: trans}
+  - ␣
+  - {t: '3', h: toggle}
+  '3':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Boot
+  - Boot
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - POWER
+  - POWER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&np'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [41, 40]
+  k: {t: LOW, h: toggle}
+- p: [41, 40]
+  k: {t: RAI, h: toggle}
+- p: [6, 7]
+  k: {t: BAS, h: toggle}
