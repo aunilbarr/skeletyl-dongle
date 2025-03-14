@@ -20,7 +20,7 @@
 
         tf1 {
             bindings = <&tog 1>;
-            key-positions = <41 40>;
+            key-positions = <40 39>;
         };
 
         tf2 {
@@ -73,10 +73,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4           &kp N5          &kp N6         &kp N7        &kp N8    &kp N9     &kp N0        &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4    &kp LG(PLUS)   &mmv MOVE_UP  &kp UP    &mkp RCLK  &kp K_POWER   &trans
-&kp LSHFT   &kp LCTRL     &kp TAB       &kp ESC       &kp LC(LG(ESC))  &np             &kp LG(MINUS)  &kp LEFT      &kp DOWN  &kp RIGHT  &kp LA(LGUI)  &kp LALT
-                                        &kp LGUI      &trans           &kp SPACE       &kp RET        &trans        &kp RALT
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4         &kp N5        &kp N6         &kp N7        &kp N8    &kp N9     &kp N0        &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR    &kp LG(PLUS)   &mmv MOVE_UP  &kp UP    &mkp RCLK  &kp K_POWER   &trans
+&kp LSHFT   &kp LCTRL     &kp TAB       &kp ESC       &kp LC(LG(Q))  &np           &kp LG(MINUS)  &kp LEFT      &kp DOWN  &kp RIGHT  &kp LA(LGUI)  &kp LALT
+                                        &kp LGUI      &trans         &kp SPACE     &kp RET        &trans        &kp RALT
             >;
         };
 
@@ -90,10 +90,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL         &kp AT                &kp HASH              &kp DLLR              &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp LC(TAB)      &kp LG(S)             &kp C_BRIGHTNESS_INC  &mt LG(TAB) CAPSLOCK  &out OUT_TOG    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp LC(LS(TAB))  &kp LG(LS(NUMBER_3))  &kp C_BRIGHTNESS_DEC  &kp LG(W)             &kp LG(Q)       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                                  &kp LGUI              &studio_unlock        &kp SPACE       &trans     &kp SPACE  &to 3
+&kp TAB    &kp EXCL         &kp AT                &kp HASH              &kp DLLR          &kp PRCNT       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &kp LC(TAB)      &kp LG(S)             &kp C_BRIGHTNESS_INC  &mt LG(TAB) CLCK  &out OUT_TOG    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LC(LS(TAB))  &kp LG(LS(NUMBER_3))  &kp C_BRIGHTNESS_DEC  &kp LG(W)         &kp LG(Q)       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                                                  &kp LGUI              &studio_unlock    &kp SPACE       &trans     &kp SPACE  &to 3
             >;
         };
 
@@ -111,7 +111,7 @@
         compatible = "zmk,conditional-layers";
 
         if3 {
-            if-layers = <0 2>;
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };

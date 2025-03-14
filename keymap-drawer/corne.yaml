@@ -61,7 +61,7 @@ layers:
   - BT 2
   - BT 3
   - BT 4
-  - BT 5
+  - BT CLR
   - Gui++
   - '&mmv MOVE_UP'
   - ↑
@@ -72,7 +72,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - ↹
   - Esc
-  - Ctl+Gui+Esc
+  - Ctl+Gui+Q
   - '&np'
   - Gui+-
   - ←
@@ -103,7 +103,7 @@ layers:
   - Tab Right
   - Gui+S
   - BRIGHTNESS INC
-  - {t: CAPSLOCK, h: Gui+↹}
+  - {t: CLCK, h: Gui+↹}
   - OUT TOG
   - '-'
   - '='
@@ -168,12 +168,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [41, 40]
+- p: [40, 39]
   k: {t: LOW, h: toggle}
 - p: [41, 40]
   k: {t: RAI, h: toggle}
