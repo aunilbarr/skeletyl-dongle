@@ -38,11 +38,11 @@ layers:
   - /
   - Esc
   - $$mdi:apple-keyboard-command$$
-  - {t: ENTER, h: RAI}
+  - {t: RETURN, h: RAI}
   - LOW
   - RAI
   - ␣
-  - {t: BACKSPACE, h: LOW}
+  - {t: DELETE, h: LOW}
   LOW:
   - ↹
   - '1'
