@@ -29,7 +29,7 @@
         };
 
         tf3 {
-            bindings = <&tog 0>;
+            bindings = <&tog 3>;
             key-positions = <6 7>;
         };
     };
@@ -98,6 +98,7 @@
         };
 
         layer_3 {
+            display-name = "3";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &bootloader    &bootloader  &trans       &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans         &kp K_POWER  &kp C_POWER  &trans  &trans  &trans  &trans

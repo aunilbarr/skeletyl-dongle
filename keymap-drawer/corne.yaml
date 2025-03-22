@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
   BAS:
   - ↹
@@ -178,4 +178,4 @@ combos:
 - p: [41, 40]
   k: {t: RAI, h: toggle}
 - p: [6, 7]
-  k: {t: BAS, h: toggle}
+  k: {t: '3', h: toggle}

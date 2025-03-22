@@ -424,8 +424,8 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="546" y="26" width="28" height="26" class="combo"/>
-<a href="#BAS">
-<text x="560" y="38" class="combo tap layer-activator">BAS</text>
+<a href="#x_x">
+<text x="560" y="38" class="combo tap layer-activator">3</text>
 </a><text x="560" y="50" class="combo hold">toggle</text>
 </g>
 </g>
@@ -636,8 +636,8 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="546" y="26" width="28" height="26" class="combo"/>
-<a href="#BAS">
-<text x="560" y="38" class="combo tap layer-activator">BAS</text>
+<a href="#x_x">
+<text x="560" y="38" class="combo tap layer-activator">3</text>
 </a><text x="560" y="50" class="combo hold">toggle</text>
 </g>
 </g>
@@ -844,8 +844,8 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="546" y="26" width="28" height="26" class="combo"/>
-<a href="#BAS">
-<text x="560" y="38" class="combo tap layer-activator">BAS</text>
+<a href="#x_x">
+<text x="560" y="38" class="combo tap layer-activator">3</text>
 </a><text x="560" y="50" class="combo hold">toggle</text>
 </g>
 </g>
@@ -1033,8 +1033,8 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="546" y="26" width="28" height="26" class="combo"/>
-<a href="#BAS">
-<text x="560" y="38" class="combo tap layer-activator">BAS</text>
+<a href="#x_x">
+<text x="560" y="38" class="combo tap layer-activator">3</text>
 </a><text x="560" y="50" class="combo hold">toggle</text>
 </g>
 </g>
