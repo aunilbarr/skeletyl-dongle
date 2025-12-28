@@ -1,73 +1,110 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/reset.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
+&led_strip { chain-length = <27>; };
 
-        behaviors {
-            compatible = "zmk,behaviors";
+&behaviors {
+    compatible = "zmk,behaviors";
 
-            enc_left_ccw: enc_left_ccw {
-                compatible = "zmk,behavior-momentum";
-                label = "LEFT_ENCODER_CCW";
-                #binding-cells = <2>;
-                triggers = <&kp PGUP>;   // counter-clockwise rotation
-            };
+    enc_left_ccw: enc_left_ccw {
+        compatible = "zmk,behavior-momentum";
+        label = "LEFT_ENCODER_CCW";
+        #binding-cells = <2>;
+        triggers = <&kp PGUP>;   // counter-clockwise rotation
+    };
 
-            enc_left_cw: enc_left_cw {
-                compatible = "zmk,behavior-momentum";
-                label = "LEFT_ENCODER_CW";
-                #binding-cells = <2>;
-                triggers = <&kp PGDN>;  // clockwise rotation
-            };
-        };
+    enc_left_cw: enc_left_cw {
+        compatible = "zmk,behavior-momentum";
+        label = "LEFT_ENCODER_CW";
+        #binding-cells = <2>;
+        triggers = <&kp PGDN>;   // clockwise rotation
+    };
+};
 
-        default_layer {
-            bindings = <
+&combos {
+    compatible = "zmk,combos";
+
+    tf1 {
+        bindings = <&tog 1>;
+        key-positions = <40 39>;
+    };
+
+    tf2 {
+        bindings = <&tog 2>;
+        key-positions = <41 40>;
+    };
+
+    tf3 {
+        bindings = <&tog 3>;
+        key-positions = <6 7>;
+    };
+};
+
+&macros {
+    np: np {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp N &kp I &kp C &kp O &kp H &kp U &kp L &kp K &kp RET>;
+        label = "NP";
+    };
+};
+
+&keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+        bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-            >;
+        >;
 
-            // Encoder bindings
-            &left_encoder {
-                clockwise = <&enc_left_cw>;
-                counter-clockwise = <&enc_left_ccw>;
-                click = <&kp RET>;
-            };
+        &left_encoder {
+            clockwise = <&enc_left_cw>;
+            counter-clockwise = <&enc_left_ccw>;
+            click = <&kp RET>;
         };
+    };
 
-        lower_layer {
-            bindings = <
+    lower_layer {
+        bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-            >;
+        >;
 
-            &left_encoder {
-                clockwise = <&enc_left_cw>;
-                counter-clockwise = <&enc_left_ccw>;
-                click = <&kp RET>;
-            };
+        &left_encoder {
+            clockwise = <&enc_left_cw>;
+            counter-clockwise = <&enc_left_ccw>;
+            click = <&kp RET>;
         };
+    };
 
-        raise_layer {
-            bindings = <
+    raise_layer {
+        bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-            >;
+        >;
 
-            &left_encoder {
-                clockwise = <&enc_left_cw>;
-                counter-clockwise = <&enc_left_ccw>;
-                click = <&kp RET>;
-            };
+        &left_encoder {
+            clockwise = <&enc_left_cw>;
+            counter-clockwise = <&enc_left_ccw>;
+            click = <&kp RET>;
         };
     };
 };
